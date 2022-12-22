@@ -1,0 +1,80 @@
+body{
+  background-color:#050210;
+  }
+ 
+  #circle::before {
+content: "";
+border-radius:50%;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: inherit;
+scale:(0.95);
+filter: blur(30px);
+opacity: 80%;
+}
+ 
+  #circle {
+ 
+  background:  linear-gradient(0deg, #fb5dad, #55fb9f, #b97aff);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation:rotate-colors;
+  animation-duration:1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+ 
+}
+
+  @keyframes rotate-colors{
+  from{
+ transform: rotate(0deg)}
+  to{
+  transform: rotate(360deg)}
+  }
+
+
+
+#inner-circle{
+background:black;
+border-radius:50%;
+width:250px;
+height: 250px;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+
+}
+#inner-circle::after {
+  content:"";
+  background-color:#130b31;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  animation: circle-scale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  filter:
+}
+@keyframes circle-scale{
+  from{
+ transform: scale(0%)}
+  to{
+  transform: scale(100%)}
+  }
